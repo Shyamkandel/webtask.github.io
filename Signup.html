@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>Shyamkandel.com.np</title>
+    <link type="text/css" rel="stylesheet" href="css/mycss.css">
+<style>
+            .game,.Account,.Home{
+            width:73px;
+            height:70px;
+            border-radius:100%;
+        }
+        body{
+            background-color:rgb(43, 49, 226);
+        }
+        .sh{
+            font-size: 40px;
+            color:aquamarine;
+            height:40px;
+            width:400px;
+            font-family:cursive;
+        }
+        hr{
+            width:340px;
+            border:solid rgba(255, 255, 255, 0.455) 12px;
+        
+            border-radius: 40px;
+        }
+        .far{
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 4    0px;
+            border: solid black 2px;
+            background-color:darkcyan;
+        }
+        .box{
+            background-color:rgba(0, 255, 255, 0.294);
+            font-family: 'Times New Roman', Times, serif;
+            width: 500px;
+            height:28px;
+                        border: solid rgb(0, 0, 0) 2px;
+
+        }
+        .confirm{
+            background-color: rgba(0, 0, 0, 0.158);
+            color:rgb(139, 125, 152);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 40px;
+            border-radius:40px;
+        }
+        .fur{
+            background-color:rgba(97, 184, 184, 0.27);
+            height: 420px;
+            width:541px;
+            border:solid rgb(233, 233, 233) 4px;
+            border-radius: 20%;
+        }
+</style>
+</head>
+<body>
+    
+<section id="vidpar">
+    <video id="starvid" autoplay loop muted >
+        <source type="video/mp4" src="Image/star.mp4"/> 
+    </video>
+
+
+    <nav id="nav">
+        <!--This is home button-->
+<a href="index.html">
+<img src="Image/Home.png" class="Home" title="Home" alt="Home" />
+</a> 
+<!--This is calculator button-->
+<a href="Calculator.html">
+    <img title="calculator" class="calcu" src="Image/Calculator.png" alt="Calculator" />
+</a>
+<!--This is gamebutton-->
+<a href="Game.html">
+    <img title="Game" class="game" src="Image/Game.png" alt="Game" /> 
+</a>
+
+<!--This is Account button!-->
+<a href="Account.html">
+    <img src="Image/Account.png" alt="Seeting" title="Account" class="Account">
+    </a>
+    
+<!--Login script!!-->
+<script>
+    function myfunction() {
+        var FristN = document.myform.fname.value;
+        var LastN = document.myform.lname.value;
+        var pass = document.myform.password.value;
+        var cpass = document.myform.cpassword.value;
+    
+        if (FristN == null || FristN == "" || FristN.length<3) {
+            alert("Please Enter Your Name!! . At least 3Word");
+            return false;
+        }
+        else if(LastN == null || LastN.length<3) {
+            alert("Please Enter Your Last Name.Enter at least 3Word");
+            return false;
+        }
+        else if (pass.length<8 || pass == null) {
+            alert("  Please Enter 8 Character long password!!!")
+            return false;
+        }
+        else if (cpass == null || cpass != pass) {
+            alert("Password Did not matched!")
+            return false;
+        }
+    }
+        </script>
+
+          <!--Sign up Heading-->
+   <center><font class="sh" title="Welcome to Shyamkandel.com.np!"><strong>S i g n &nbsp;  U p <hr></strong></font></center>
+
+   <!--Form starting--> 
+   <br>
+    <center>
+         <div class="fur">
+
+            <form name="myform" method="post"  action="index.html" onsubmit="return myfunction()">
+<br>
+<!--Frist name-->
+                <span class="far" title="Enter Frist Name">Enter Your Frist Name:</span> 
+                <br> <br>
+                <input name="fname" type="Text" placeholder="Enter Your Name" class="box">
+                <br><br>    
+        
+                <!--Last Name-->
+                <span class="far" title="Enter Last Name">Enter Your Last Name:</span> 
+                <br> <br>
+                <input name="lname" type="Text" placeholder="Enter Your Last Name" class="box">
+        <br><br>
+        
+        <!--Password-->
+                        <span class="far" title="Enter Password">Enter Your  Password:</span>
+                        <br> <br>
+                        <input name="password" type="password" placeholder="Enter Your Password" class="box">
+        <br><br>
+        
+        <!--Confirm Password-->
+                        <span class="far" title="Confirm Password">Confirm Password:</span>
+                        <br> <br>
+                        <input name="cpassword" type="password" placeholder="Confirm Password" class="box">
+        <br><br>
+        <!--Confirm Button-->
+      
+
+            <input  type="submit" value="Confirm" class="confirm">
+   
+        
+            </form> <!--Form end here!!-->
+         </div>
+    </center>
+
+    </nav>
+
+</section>
+        
+    
+
+</body>
+</html>
